@@ -41,9 +41,9 @@ const Landing = () => {
                     </div>
 
                     <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-slate-900 tracking-tight leading-[1.1] mb-4 md:mb-6 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-                        Land your dream job <br className="hidden md:block" />
+                        Land Your Dream Job <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
-                            twice as fast.
+                            Twice As Fast.
                         </span>
                     </h1>
 
@@ -105,49 +105,49 @@ const Landing = () => {
                         <p className="text-sm md:text-lg text-slate-600 max-w-2xl mx-auto hidden md:block">Skip the generic advice. Our AI analyzes your profile and automatically matches you with the right opportunities.</p>
                     </div>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full max-w-5xl mx-auto">
+                    <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-6 w-full max-w-5xl mx-auto px-1 sm:px-0">
 
                         {/* Feature 1 */}
-                        <Link to="/login" className="group relative overflow-hidden rounded-[24px] md:rounded-[32px] bg-white border border-slate-200 hover:border-blue-300 transition-colors p-4 md:p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md cursor-pointer hover:-translate-y-1 transform duration-300 active:scale-95 aspect-square">
+                        <Link to="/login" className="group relative overflow-hidden rounded-[16px] md:rounded-[32px] bg-white border border-slate-200 hover:border-blue-300 transition-colors p-2 sm:p-4 md:p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md cursor-pointer hover:-translate-y-1 transform duration-300 active:scale-95 aspect-square">
                             <div className="absolute w-full h-full bg-blue-50/10 group-hover:bg-blue-50/40 transition-colors pointer-events-none"></div>
-                            <div className="w-12 h-12 md:w-16 md:h-16 rounded-[16px] md:rounded-[20px] bg-blue-50 flex items-center justify-center mb-3 md:mb-5 relative z-10 border border-blue-100 group-hover:scale-110 transition-transform">
-                                <Search className="w-5 h-5 md:w-7 md:h-7 text-blue-600" />
+                            <div className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-[10px] md:rounded-[20px] bg-blue-50 flex items-center justify-center mb-2 sm:mb-3 md:mb-5 relative z-10 border border-blue-100 group-hover:scale-110 transition-transform">
+                                <Search className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 text-blue-600" />
                             </div>
-                            <div className="relative z-10 w-full px-1">
-                                <h3 className="text-[13px] sm:text-sm md:text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors leading-tight">AI Job Finder</h3>
+                            <div className="relative z-10 w-full px-0 sm:px-1">
+                                <h3 className="text-[9px] min-[380px]:text-[11px] sm:text-sm md:text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors leading-tight break-words">AI Job<br className="sm:hidden" /> Finder</h3>
                             </div>
                         </Link>
 
                         {/* Feature 2 */}
-                        <Link to="/login" className="group relative overflow-hidden rounded-[24px] md:rounded-[32px] bg-white border border-slate-200 hover:border-purple-300 transition-colors p-4 md:p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md cursor-pointer hover:-translate-y-1 transform duration-300 active:scale-95 aspect-square">
+                        <Link to="/login" className="group relative overflow-hidden rounded-[16px] md:rounded-[32px] bg-white border border-slate-200 hover:border-purple-300 transition-colors p-2 sm:p-4 md:p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md cursor-pointer hover:-translate-y-1 transform duration-300 active:scale-95 aspect-square">
                             <div className="absolute w-full h-full bg-purple-50/10 group-hover:bg-purple-50/40 transition-colors pointer-events-none"></div>
-                            <div className="w-12 h-12 md:w-16 md:h-16 rounded-[16px] md:rounded-[20px] bg-purple-50 flex items-center justify-center mb-3 md:mb-5 relative z-10 border border-purple-100 group-hover:scale-110 transition-transform">
-                                <FileText className="w-5 h-5 md:w-7 md:h-7 text-purple-600" />
+                            <div className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-[10px] md:rounded-[20px] bg-purple-50 flex items-center justify-center mb-2 sm:mb-3 md:mb-5 relative z-10 border border-purple-100 group-hover:scale-110 transition-transform">
+                                <FileText className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 text-purple-600" />
                             </div>
-                            <div className="relative z-10 w-full px-1">
-                                <h3 className="text-[13px] sm:text-sm md:text-xl font-bold text-slate-800 group-hover:text-purple-600 transition-colors leading-tight">ATS resume builder</h3>
+                            <div className="relative z-10 w-full px-0 sm:px-1">
+                                <h3 className="text-[9px] min-[380px]:text-[11px] sm:text-sm md:text-xl font-bold text-slate-800 group-hover:text-purple-600 transition-colors leading-tight break-words">ATS resume<br className="sm:hidden" /> builder</h3>
                             </div>
                         </Link>
 
                         {/* Feature 3 */}
-                        <Link to="/login" className="group relative overflow-hidden rounded-[24px] md:rounded-[32px] bg-white border border-slate-200 hover:border-orange-300 transition-colors p-4 md:p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md cursor-pointer hover:-translate-y-1 transform duration-300 active:scale-95 aspect-square">
+                        <Link to="/login" className="group relative overflow-hidden rounded-[16px] md:rounded-[32px] bg-white border border-slate-200 hover:border-orange-300 transition-colors p-2 sm:p-4 md:p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md cursor-pointer hover:-translate-y-1 transform duration-300 active:scale-95 aspect-square">
                             <div className="absolute w-full h-full bg-orange-50/10 group-hover:bg-orange-50/40 transition-colors pointer-events-none"></div>
-                            <div className="w-12 h-12 md:w-16 md:h-16 rounded-[16px] md:rounded-[20px] bg-orange-50 flex items-center justify-center mb-3 md:mb-5 relative z-10 border border-orange-100 flex-col group-hover:scale-110 transition-transform">
-                                <span className="text-[8px] md:text-[10px] font-bold text-orange-600 uppercase tracking-widest leading-none pt-0.5">Soon</span>
+                            <div className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-[10px] md:rounded-[20px] bg-orange-50 flex items-center justify-center mb-2 sm:mb-3 md:mb-5 relative z-10 border border-orange-100 flex-col group-hover:scale-110 transition-transform">
+                                <span className="text-[6px] sm:text-[8px] md:text-[10px] font-bold text-orange-600 uppercase tracking-widest leading-none pt-0.5">Soon</span>
                             </div>
-                            <div className="relative z-10 w-full px-1">
-                                <h3 className="text-[13px] sm:text-sm md:text-xl font-bold text-slate-800 group-hover:text-orange-600 transition-colors leading-tight">Interview Prep</h3>
+                            <div className="relative z-10 w-full px-0 sm:px-1">
+                                <h3 className="text-[9px] min-[380px]:text-[11px] sm:text-sm md:text-xl font-bold text-slate-800 group-hover:text-orange-600 transition-colors leading-tight break-words">Interview<br className="sm:hidden" /> Prep</h3>
                             </div>
                         </Link>
 
                         {/* Feature 4 */}
-                        <Link to="/login" className="group relative overflow-hidden rounded-[24px] md:rounded-[32px] bg-white border border-slate-200 hover:border-emerald-300 transition-colors p-4 md:p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md cursor-pointer hover:-translate-y-1 transform duration-300 active:scale-95 aspect-square">
+                        <Link to="/login" className="group relative overflow-hidden rounded-[16px] md:rounded-[32px] bg-white border border-slate-200 hover:border-emerald-300 transition-colors p-2 sm:p-4 md:p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md cursor-pointer hover:-translate-y-1 transform duration-300 active:scale-95 aspect-square">
                             <div className="absolute w-full h-full bg-emerald-50/10 group-hover:bg-emerald-50/40 transition-colors pointer-events-none"></div>
-                            <div className="w-12 h-12 md:w-16 md:h-16 rounded-[16px] md:rounded-[20px] bg-emerald-50 flex items-center justify-center mb-3 md:mb-5 relative z-10 border border-emerald-100 flex-col group-hover:scale-110 transition-transform">
-                                <span className="text-[8px] md:text-[10px] font-bold text-emerald-600 uppercase tracking-widest leading-none pt-0.5">Soon</span>
+                            <div className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-[10px] md:rounded-[20px] bg-emerald-50 flex items-center justify-center mb-2 sm:mb-3 md:mb-5 relative z-10 border border-emerald-100 flex-col group-hover:scale-110 transition-transform">
+                                <span className="text-[6px] sm:text-[8px] md:text-[10px] font-bold text-emerald-600 uppercase tracking-widest leading-none pt-0.5">Soon</span>
                             </div>
-                            <div className="relative z-10 w-full px-1">
-                                <h3 className="text-[13px] sm:text-sm md:text-xl font-bold text-slate-800 group-hover:text-emerald-600 transition-colors leading-tight">Skills Learning</h3>
+                            <div className="relative z-10 w-full px-0 sm:px-1">
+                                <h3 className="text-[9px] min-[380px]:text-[11px] sm:text-sm md:text-xl font-bold text-slate-800 group-hover:text-emerald-600 transition-colors leading-tight break-words">Skills<br className="sm:hidden" /> Learning</h3>
                             </div>
                         </Link>
 

@@ -124,7 +124,7 @@ const AiResumeBuilder = () => {
     };
 
     return (
-        <div className="max-w-[1400px] mx-auto animate-in fade-in duration-500 h-[calc(100vh-100px)] flex flex-col xl:flex-row gap-6 pb-6 print:h-auto print:block print:pb-0 print:w-full">
+        <div className="max-w-[1400px] mx-auto animate-in fade-in duration-500 xl:h-[calc(100vh-100px)] flex flex-col xl:flex-row gap-6 pb-6 print:h-auto print:block print:pb-0 print:w-full">
             <style>
                 {`
                     @media print {
@@ -134,19 +134,22 @@ const AiResumeBuilder = () => {
             </style>
             {/* Scrollable Form Section */}
             <div className="w-full xl:w-[45%] bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200 overflow-y-auto scrollbar-hide print:hidden">
-                <div className="flex items-start justify-between mb-8">
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-8">
                     <div>
-                        <h2 className="text-2xl font-extrabold text-slate-800 tracking-tight flex items-center gap-2">
-                            <FileText className="w-6 h-6 text-blue-500" />
-                            Resume Data (ATS Strict)
+                        <h2 className="text-xl sm:text-2xl font-extrabold text-slate-800 tracking-tight flex items-center gap-2 mb-1">
+                            <div className="p-1.5 sm:p-2 bg-blue-50 rounded-lg">
+                                <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+                            </div>
+                            Resume Data <span className="text-slate-400 font-medium text-[15px] sm:text-lg hidden xs:inline min-[380px]:inline">(ATS Strict)</span>
                         </h2>
-                        <p className="text-sm text-slate-500 mt-1">Fill details to auto-generate PDF</p>
+                        <p className="text-sm text-slate-500">Fill details to auto-generate PDF</p>
                     </div>
                     <button
                         onClick={() => window.open('/RESUME_NEW.pdf', '_blank')}
-                        className="px-3 py-1.5 text-xs font-semibold bg-indigo-50 text-indigo-700 hover:bg-indigo-100 rounded-lg transition-colors border border-indigo-200 shadow-sm flex items-center gap-1.5"
+                        className="shrink-0 w-full sm:w-auto px-4 py-2.5 sm:py-2 text-sm font-semibold bg-white text-indigo-600 hover:bg-indigo-50 hover:text-indigo-700 rounded-xl transition-all border border-indigo-100 shadow-sm flex justify-center items-center gap-2 group"
                         title="View ATS Template Format"
                     >
+                        <Sparkles className="w-4 h-4 text-indigo-400 group-hover:text-indigo-600 transition-colors" />
                         Preview PDF Template
                     </button>
                 </div>
@@ -211,7 +214,7 @@ const AiResumeBuilder = () => {
                         <button
                             onClick={handleOptimizeSummary}
                             disabled={loadingSummary}
-                            className="absolute bottom-2 right-2 text-xs flex items-center gap-1.5 px-3 py-1.5 bg-indigo-50 text-indigo-600 rounded-md font-semibold hover:bg-indigo-100 transition-colors disabled:opacity-50"
+                            className="absolute top-2 right-2 text-xs flex items-center gap-1.5 px-3 py-1.5 bg-indigo-50 text-indigo-600 rounded-md font-semibold hover:bg-indigo-100 transition-colors disabled:opacity-50"
                         >
                             {loadingSummary ? <Loader2 className="w-3 h-3 animate-spin" /> : <Sparkles className="w-3 h-3" />}
                             AI Enhance
@@ -266,7 +269,7 @@ const AiResumeBuilder = () => {
                                 <button
                                     onClick={() => handleOptimizeExperience(index, 'experience')}
                                     disabled={loadingExp === index}
-                                    className="absolute bottom-2 right-2 text-xs flex items-center gap-1.5 px-3 py-1.5 bg-purple-50 text-purple-600 rounded-md font-semibold hover:bg-purple-100 transition-colors disabled:opacity-50"
+                                    className="absolute top-2 right-2 text-xs flex items-center gap-1.5 px-3 py-1.5 bg-purple-50 text-purple-600 rounded-md font-semibold hover:bg-purple-100 transition-colors disabled:opacity-50"
                                 >
                                     {loadingExp === index ? <Loader2 className="w-3 h-3 animate-spin" /> : <Sparkles className="w-3 h-3" />}
                                     AI Rewrite
@@ -304,7 +307,7 @@ const AiResumeBuilder = () => {
                                 <button
                                     onClick={() => handleOptimizeExperience(index, 'projects')}
                                     disabled={loadingExp === index}
-                                    className="absolute bottom-2 right-2 text-xs flex items-center gap-1.5 px-3 py-1.5 bg-orange-50 text-orange-600 rounded-md font-semibold hover:bg-orange-100 transition-colors disabled:opacity-50"
+                                    className="absolute top-2 right-2 text-xs flex items-center gap-1.5 px-3 py-1.5 bg-orange-50 text-orange-600 rounded-md font-semibold hover:bg-orange-100 transition-colors disabled:opacity-50"
                                 >
                                     {loadingExp === index ? <Loader2 className="w-3 h-3 animate-spin" /> : <Sparkles className="w-3 h-3" />}
                                     AI Rewrite
@@ -326,20 +329,12 @@ const AiResumeBuilder = () => {
                     <div className="space-y-4 mb-4">
                         {resumeData.certifications.map((cert, index) => (
                             <div key={index} className="flex gap-3 items-start relative">
-                                <div className="space-y-1 w-1/2">
+                                <div className="space-y-1 w-full relative">
                                     <input
                                         value={cert.name}
                                         onChange={(e) => handleArrayChange('certifications', index, 'name', e.target.value)}
-                                        className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-blue-500 text-sm"
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 pr-10 focus:ring-2 focus:ring-blue-500 text-sm"
                                         placeholder="Certification Name (e.g. AWS Certified)"
-                                    />
-                                </div>
-                                <div className="space-y-1 w-1/2 relative">
-                                    <input
-                                        value={cert.link}
-                                        onChange={(e) => handleArrayChange('certifications', index, 'link', e.target.value)}
-                                        className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 pr-8 focus:ring-2 focus:ring-blue-500 text-sm"
-                                        placeholder="URL (Optional)"
                                     />
                                     <button
                                         onClick={() => removeArrayItem('certifications', index)}

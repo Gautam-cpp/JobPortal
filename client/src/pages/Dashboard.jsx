@@ -109,9 +109,9 @@ const Dashboard = () => {
                         <span className="w-4 h-4 rounded-sm bg-purple-500 rotate-45"></span>
                         <h3 className="text-lg font-bold text-slate-800">Recommended Internships</h3>
                     </div>
-                    <button className="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors">
-                        View All
-                    </button>
+                    <Link to="/app/jobs" className="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors">
+                        Explore More
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
