@@ -125,7 +125,13 @@ const AiResumeBuilder = () => {
 
     return (
         <div className="max-w-[1400px] mx-auto animate-in fade-in duration-500 h-[calc(100vh-100px)] flex flex-col xl:flex-row gap-6 pb-6 print:h-auto print:block print:pb-0 print:w-full">
-
+            <style>
+                {`
+                    @media print {
+                        @page { margin: 0; }
+                    }
+                `}
+            </style>
             {/* Scrollable Form Section */}
             <div className="w-full xl:w-[45%] bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200 overflow-y-auto scrollbar-hide print:hidden">
                 <div className="flex items-start justify-between mb-8">
