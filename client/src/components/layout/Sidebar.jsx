@@ -123,7 +123,7 @@ const Sidebar = ({ isOpen, setIsOpen, isMobile = false }) => {
                             <li key={link.name}>
                                 <Link
                                     to={link.path}
-                                    className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-[#1E293B] hover:text-white transition-all group"
+                                    className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-[#1E293B] hover:text-white transition-all group relative"
                                 >
                                     <link.icon className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-slate-300" />
                                     {!isCollapsed && (
@@ -137,7 +137,7 @@ const Sidebar = ({ isOpen, setIsOpen, isMobile = false }) => {
                                         </div>
                                     )}
                                     {isCollapsed && link.badge && (
-                                        <div className="absolute right-2 w-2 h-2 bg-red-500 rounded-full"></div>
+                                        <div className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></div>
                                     )}
                                 </Link>
                             </li>

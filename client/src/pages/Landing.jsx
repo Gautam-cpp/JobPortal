@@ -37,7 +37,7 @@ const Landing = () => {
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white border border-slate-200 shadow-sm text-xs md:text-sm font-semibold text-slate-700 mb-6 md:mb-8 hover:border-blue-300 transition-colors animate-in fade-in slide-in-from-bottom-4 duration-700">
                         <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-blue-500" />
                         <span className="hidden md:inline">Meet the next generation of career tools</span>
-                        <span className="md:hidden">Next-gen career tools</span>
+                        <span className="md:hidden">Next-Gen Career Tools</span>
                     </div>
 
                     <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-slate-900 tracking-tight leading-[1.1] mb-4 md:mb-6 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
