@@ -16,7 +16,7 @@ const Dashboard = () => {
         const fetchRecommended = async () => {
             try {
                 // Fetch real jobs, defaulting to intern/entry level roles to fit the "Student" dash context
-                const res = await axios.get('/api/jobs/search?role=Intern&location=Remote&type=Internship');
+                const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/jobs/search?role=Intern&location=Remote&type=Internship`);
                 if (res.data.success && res.data.jobs) {
                     setRecommendedJobs(res.data.jobs.slice(0, 3));
                 }

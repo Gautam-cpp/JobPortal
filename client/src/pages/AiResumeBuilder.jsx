@@ -60,7 +60,7 @@ const AiResumeBuilder = () => {
             if (hasExp) payload.experiences = resumeData.experience;
             if (hasProj) payload.projects = resumeData.projects;
 
-            const res = await axios.post('/api/resume/optimize', payload);
+            const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/resume/optimize`, payload);
 
             if (res.data.success) {
                 const updates = {};
@@ -83,7 +83,7 @@ const AiResumeBuilder = () => {
         }
         setLoadingSummary(true);
         try {
-            const res = await axios.post('/api/resume/optimize-summary', { text: resumeData.summary });
+            const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/resume/optimize-summary`, { text: resumeData.summary });
             if (res.data.success) {
                 setResumeData(prev => ({ ...prev, summary: res.data.optimizedText }));
             }
@@ -104,7 +104,7 @@ const AiResumeBuilder = () => {
         }
         setLoadingExp(index);
         try {
-            const res = await axios.post('/api/resume/optimize-experience', { text: item.description, type });
+            const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/resume/optimize-experience`, { text: item.description, type });
             if (res.data.success) {
                 handleArrayChange(type, index, 'description', res.data.optimizedText);
             }

@@ -20,7 +20,7 @@ const AiJobSearch = () => {
 
         try {
             // Direct integration with Job APIs to be built on backend
-            const res = await axios.get(`/api/jobs/search`, {
+            const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/jobs/search`, {
                 params: { role, location, type }
             });
             setJobs(res.data.jobs || []);
